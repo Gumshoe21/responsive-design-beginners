@@ -1,0 +1,23 @@
+@use '../util'; // it will automatically serach for an index.scss in the util folder so no need to specify it explicitly
+  // TODO figure out what sass modules are
+// @use '../util' as u; <-- this is a way to alias the namespace to whatever we want
+// @use '../util' as *; <-- wildcard would allow us to not use a namespace at all,
+// so we could do something like font-family: $font instead of font-family: util.$font -
+// but this opens up possibility to name conflicts so it's prob safer to use namespaces in some form
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+
+*, *::before, *::after {
+  box-sizing: inherit; // inherit box-sizing value of border-box from html element
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  font-family: util.$font; // have to give it a namespace TODO
+  color: var(--text-color);
+}
