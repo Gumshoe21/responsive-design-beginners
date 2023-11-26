@@ -1,0 +1,47 @@
+// BEM
+// the grid is the Block
+.grid {
+  display: grid;
+  // This is essentially saying that in our grid we want one column.
+  // The fr unit is one that's used for CSS grid.
+  // The fr is short for fractional unit and it's sort of like a ratio,
+  // where it will divide the available space into as many columns as you have.
+  // Since we only have one column, 100% of the width will be given to that column.
+  // And you'll see more of the fr unit and how it works when we set up the desktop grid styles.
+  gap: 40px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+
+  @media (min-width: 900px) {
+      // What 2fr 1fr means is that the first column, which will be the main content,
+      // will be 2x as wide as the second column with the sidebar content.
+      // The fr numbers relate to one another. If we save and then look at the website,
+      // we can see that the content is now in 2 columns. And in the inspector,
+      // if we hover over the main and aside tags, we can check the width and see that the main content
+      // is twice the size of the sidebar.
+      grid-template-columns: 2fr 1fr;
+      // We have the gap between the columns. But there's also a gap below that first track.
+      // This actually shouldn't be the case, because the gap should only add space between actual tracks that exist in the grid, and there's no other content.
+      // This is because we still have that grid-template-rows: auto auto; style rule from our mobile styles.
+      // This rule is still affecting desktop widths because there is not a different rule for grid-template-rows in the media query.
+      //
+      // This is one thing to keep in mind, that the styles outside the media query are what's considered the default styles.
+      //And styles in the media query will add new rules and override those default styles if they have a different value for a property than what is default.
+      //I'd like to override the 2 rows in the grid-template-rows and set it to 1 row instead for desktop widths.
+      //So in our styles I'll add grid-template-rows: auto; in our desktop media query. And now when we load the website we can see that there's only 1 row in the template and a gap only between the 2 columns. The gap at the bottom of the grid has been removed.
+
+      grid-template-rows: auto; // placing this here means means that for 900 px wide and up for viewport, the grid will have just 1 row and be set to auto
+  }
+
+  &__main, &__sidebar {
+      padding: 40px;
+  }
+  // Elements
+  &__main {
+    background-color: hsl(240, 99%, 33%);
+  }
+  &__sidebar {
+    background-color: magenta;
+  }
+
+}
