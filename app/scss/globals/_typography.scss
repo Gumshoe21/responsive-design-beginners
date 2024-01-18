@@ -1,14 +1,17 @@
-h1, h2, h3 {
-    font-weight: 700;
-    line-heigth: 1.1; // 110%; makes sure line-height of each line of text is slightly taller than font size itself- the 1.1 kindia means 110%
-    margin-top: 0; // to prevent browsers from setting their own margin-top
-
+h1,
+h2,
+h3 {
+	font-weight: 700;
+	line-height: 1.1; // 110%; makes sure line-height of each line of text is slightly taller than font size itself- the 1.1 kindia means 110%
+	margin-top: 0; // to prevent browsers from setting their own margin-top
 }
 
 p {
-    margin-top: 0; // TODO why need add margin-top to h1,h2,h3 and p
+	margin-top: 0; // TODO why need add margin-top to h1,h2,h3 and p
 }
 
-a, a:visited, a:active {
-    text-decoration: none;
+a,
+a:visited,
+a:active {
+	text-decoration: none;
 }

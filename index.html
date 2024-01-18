@@ -1,50 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- --
+	<head>
+		<meta charset="UTF-8" />
+		<!-- --
     There are a few components that work together in order for responsive design to work in the browser. The first one is that you need a specific tag in your HTML head:  the tag with the name "viewport." The viewport is the part of the website that you can see in your device. Most websites are longer or taller than your viewport, but you can scroll down the page to read what's further down. So the website content is usually taller than your viewport, but is the same width as your viewport, unless you have to scroll horizontally to see content that's off-screen initially.
 
 The viewport meta tag is doing two things. First, it's setting the width of the website to the device width that is currently viewing it: content="width=device-width". So if you're loading the website with a phone that is 375px wide, the website will be 375 pixels wide. If you're loading it from a monitor that's 1920px wide, the website will be 1920 pixels wide also.
 
     Then the initial-scale set to 1.0 means that it will set the initial zoom at 100%. (initial-scale=1.0)
       ---->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mythos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/dist/style.css" />
-    <script src="/app/js/script.js"></script>
-  </head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mythos</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="/dist/style.css" />
+		<script src="/app/js/script.js"></script>
+	</head>
 
-  <body>
-    <div class="grid">
-      <main class="grid__main">
-        <h1>Mythos</h1>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          illo tempora officia corporis ullam magnam quidem sint quae atque odio
-          sit, odit minus rem itaque doloremque eius recusandae hic libero
-          voluptatibus laudantium, tenetur facere suscipit consequatur?
-          Exercitationem, cupiditate et? Libero ea maiores labore reprehenderit
-          cumque ratione magnam dicta? Facere, consequatur.
-        </p>
-      </main>
-      <aside class="grid__sidebar">
-        <h2>More Info</h2>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          illo tempora officia corporis ullam magnam quidem sint quae atque odio
-          sit, odit minus rem itaque doloremque eius recusandae hic libero
-          voluptatibus laudantium, tenetur facere suscipit consequatur?
-          Exercitationem, cupiditate et? Libero ea maiores labore reprehenderit
-          cumque ratione magnam dicta? Facere, consequatur.
-        </p>
-      </aside>
-    </div>
-  </body>
+	<body>
+		<div class="grid">
+			<main class="grid__main">
+				<h1>Mythos</h1>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita illo tempora officia corporis ullam magnam quidem sint quae atque odio sit, odit minus rem itaque doloremque eius recusandae hic libero voluptatibus laudantium, tenetur facere suscipit consequatur? Exercitationem, cupiditate et? Libero ea maiores labore reprehenderit cumque ratione magnam dicta? Facere, consequatur.</p>
+			</main>
+			<aside class="grid__sidebar">
+				<h2>More Info</h2>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita illo tempora officia corporis ullam magnam quidem sint quae atque odio sit, odit minus rem itaque doloremque eius recusandae hic libero voluptatibus laudantium, tenetur facere suscipit consequatur? Exercitationem, cupiditate et? Libero ea maiores labore reprehenderit cumque ratione magnam dicta? Facere, consequatur.</p>
+			</aside>
+		</div>
+	</body>
 </html>

@@ -1,0 +1,30 @@
+// 700px, 900px, 1440px
+$breakpoints-up: (
+	"md": 43.75em,
+	// 700px
+	"large": 56.25em,
+	// 900px
+	"xlarge": 90em // 1440px,,,,,,,,,,,
+);
+
+// 699.98, 899.98, 1439.98 - .02 px diff from up - avoids overlap the best way possible, Bootstrap has used this
+$breakpoints-down: (
+	// 699.98 / 16
+	"small": 43.7485em,
+	// 899.98 / 16
+	"medium": 56.24875em,
+	// 1439.98 / 16,
+	"large": 89.99875em
+);
+
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
